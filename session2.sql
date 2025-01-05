@@ -1,3 +1,30 @@
+--cách 1: tạo database trực tiếp từ tablePlus
+-- windows: ctrl + ?
+--mac: cmd + ?
+
+--cách 2: tạo database từ code SQL
+CREATE DATABASE node48_test
+--windows : ctrl + enter
+--mac: cmd + enter
+--lưu ý: chỉ tạo database 1 lần
+--create database node48_temp
+
+--để dùng database mới tạo
+use node48_test
+--tạo table
+--kiểu dữ liệu: 3 loại chính
+--1. kiểu string: varchar , text,...
+--2. kiểu number: int ,float, double,...
+--3. kiểu ngày tháng năm: date, datetime, TIMESTAMP,...
+
+--<tên column> <kiểu dữ liệu> <constraint>
+CREATE TABLE product (
+
+	product_name VARCHAR(100) NOT NULL,
+	image VARCHAR (255),
+	price double,
+	rate INT
+)
 INSERT INTO product (product_name, image, price, rate) VALUES
 ('Wireless Headphones', 'images/headphones.jpg', 49.99, 5),
 ('Gaming Mouse', 'images/mouse.jpg', 29.99, 4),
